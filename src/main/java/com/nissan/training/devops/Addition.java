@@ -17,9 +17,10 @@ public class Addition extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		out= response.getWriter(); 
 		String n1=(request.getParameter("nmbr1"));
 		String n2=(request.getParameter("nmbr2"));
-		System.out.println("Sum is : "+printAdd(n1,n2));
+		out.println("Sum is : "+printAdd(n1,n2));
 		
 	}
 
