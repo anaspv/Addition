@@ -19,19 +19,19 @@ public class Addition extends HttpServlet {
 			throws ServletException, IOException {
 		String n1=(request.getParameter("nmbr1"));
 		String n2=(request.getParameter("nmbr2"));
-		printAdd(n1,n2);
+		System.out.println("Sum is : "+printAdd(n1,n2));
 		
 	}
 
-	private void printAdd(String n1, String n2) {
+	private String printAdd(String n1, String n2) {
 		
 		try {
 			float nm1=Float.parseFloat(n1);
 			float nm2=Float.parseFloat(n2);
 			float res=nm1+nm2;
-			System.out.println("Result is : "+res);
+			return (Float.toString(res));
 		}catch(Exception e) {
-			System.out.println("Invalid");
+			return("Invalid");
 		}
 		
 	}
