@@ -10,7 +10,7 @@
 <input type = "text" name="nmbr1">
 <input type="button" value="+">
 <input type="text" name="nmbr2">
-<input type="button" value="Add">
+<input type="submit" value="Add">
 </form>
 
 </body>
